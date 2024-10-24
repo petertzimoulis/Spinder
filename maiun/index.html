@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify API Music Player</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
+
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="../src/logged.js"></script>
+</head>
+
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Music Your Way</h1>
+            <p>In an era where you’re able to find love, order food, and keep in touch with your family in just a few swipes, why can’t you find new music just as easily? With Spinder, you’ll have personalized recommendations, and we suggest songs that are similar to that.</p>
+        </div>
+    </header> <!-- hero -->
+
+    <div class="navbar">
+        <img src="../logo.png" alt="Headphone Logo" id="spinder-logo"></img>
+        <!-- Button to navigate to Home page -->
+        <a href="index.html" class="button">Home</a>
+        <!-- Button to navigate to About Us page -->
+        <a href="aboutus.html" class="button">About Us</a>
+        <!-- Button to navigate to Contact page -->
+        <a href="contact.html" class="button">Contact</a>
+        <!-- Button to navigate to Credits page -->
+        <a href="credits.html" class="button">Credits</a>
+         <!-- Button to navigate to Search page -->
+         <a href="search.html" class="button">Search Spotify</a>
+    </div> <!-- navbar -->
+    
+    <div id="spinder-header"></div>
+    
+    <div id="app">
+        <button id="login">Log in with Spotify</button>    
+        <h2 id="head-text" class="hidden"> Data from last 30 days </h2>
+
+        <div class="container hidden" id="info-container">	
+            
+            <div id="top-tracks-box" class="box">
+                <h2 id="box-title">Top 10 Tracks</h2>
+                <div id="top-tracks"></div>
+            </div> <!-- top tracks box -->
+            
+            <div id="top-artists-box" class="box">
+                <h2 id="box-title">Top 5 Artists</h2>
+                <div id="top-artists"></div>
+            </div> <!-- top artist box -->
+            
+            <div id="recs-box" class="box">	
+                <h2 id="box-title">Recommendations</h2>
+                <div id="rec-box"><div id="recommended-tracks"></div></div>
+                    
+                <div class="player">
+                    <div id="embed-player"></div>
+                    <div id="rec-buttons-container">
+                        <button id="prevButton">&#8592;</button>
+                        <button id="nextButton">&#8594;</button>
+                    </div>
+
+                    <div id = "playlist-box">
+                        <input type="text" id="playlistName" class="textbox hidden" placeholder="Add a name for your playlist" value="Recommended Songs" style="margin-bottom:10px; display:block">
+                        <button id="playlist-button">Create Playlist</button>
+                    </div> <!-- playlists -->
+                </div> <!-- player -->
+            </div> <!-- recs box -->
+            
+            <div id="chart-box" class="box">
+                <h2 id="box-title">Song Information</h2>
+                <canvas id="chart"></canvas>
+            </div> <!-- chart box -->
+        
+            <!--Modified by Ilysia 5/17/24-->
+            <div id="filters-container" class="box">
+                <h2 id="filters-title">Filters</h2>
+                <p>Check off desired music attributes for recommendations!</p>
+                    <div id="filters">
+                        <label><input type="checkbox" id="filter-danceability"> Danceability</label><br>
+                        <label><input type="checkbox" id="filter-energy"> Energy</label><br>
+                        <label><input type="checkbox" id="filter-speechiness"> Speechiness</label><br>
+                        <label><input type="checkbox" id="filter-acousticness"> Acousticness</label><br>
+                        <label><input type="checkbox" id="filter-instrumentalness"> Instrumentalness</label><br>
+                        <label><input type="checkbox" id="filter-liveness"> Liveness</label><br>
+                        <label><input type="checkbox" id="filter-valence"> Valence</label><br>
+                    </div> <!-- filter checkboxes -->
+            </div> <!-- filters container -->
+
+        
+        </div> <!-- container -->
+    </div> <!-- app -->
+   
+    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- <script src="https://sdk.scdn.co/spotify-player.js"></script> -->
+    <script src="../src/app.js"></script>
+    <script src="../src/chart.js"></script>
+</body>
+
+<footer class="footer">
+    <p>© 2024 Spinder. All rights reserved.</p>
+    <p>Contact: <a href="mailto:info@yourcompany.com">theGoat@drexel.edu</a></p>
+</footer> <!-- footer --> 
+
+</html>
+
