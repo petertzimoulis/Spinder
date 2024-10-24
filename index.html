@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Login / Sign Up Form</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="./styles/login.css">
+</head>
+<body>
+<div>
+    <!-- Container for the login and create account forms -->
+    <div class="container">
+        <!-- Login Form -->
+        <form class="form" id="login">
+            <h1 class="form__title">Login</h1>
+            <!-- Container for form-level error messages -->
+            <div class="form__message form__message--error"></div>
+            <!-- Input group for Username or Email -->
+            <div class="form__input-group">
+                <input type="text" class="form__input" autofocus placeholder="Username or email">
+                <!-- Container for input-specific error messages -->
+                <div class="form__input-error-message"></div>
+            </div>
+            <!-- Input group for Password -->
+            <div class="form__input-group">
+                <input type="password" class="form__input" autofocus placeholder="Password">
+                <!-- Container for input-specific error messages -->
+                <div class="form__input-error-message"></div>
+            </div>
+            <!-- Button to submit the form -->
+            <button class="form__button" type="submit">Continue</button>
+            <!-- Additional links within the form -->
+            <p class="form__text">
+                <a href="#" class="form__link">Forgot your password?</a>
+            </p>
+            <p class="form__text">
+                <!-- Link to switch to the create account form -->
+                <a class="form__link" href="#" id="linkCreateAccount">Don't have an account? Create account</a>
+            </p>
+        </form>
+
+        <!-- Create Account Form (Initially hidden) -->
+        <form class="form form--hidden" id="createAccount">
+            <h1 class="form__title">Create Account</h1>
+            <!-- Container for form-level error messages -->
+            <div class="form__message form__message--error"></div>
+            <!-- Input group for Username -->
+            <div class="form__input-group">
+                <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
+                <!-- Container for input-specific error messages -->
+                <div class="form__input-error-message"></div>
+            </div>
+            <!-- Input group for Email Address -->
+            <div class="form__input-group">
+                <input type="text" class="form__input" autofocus placeholder="Email Address">
+                <!-- Container for input-specific error messages -->
+                <div class="form__input-error-message"></div>
+            </div>
+            <!-- Input group for Password -->
+            <div class="form__input-group">
+                <input type="password" class="form__input" autofocus placeholder="Password">
+                <!-- Container for input-specific error messages -->
+                <div class="form__input-error-message"></div>
+            </div>
+            <!-- Input group for Confirm Password -->
+            <div class="form__input-group">
+                <input type="password" class="form__input" autofocus placeholder="Confirm password">
+                <!-- Container for input-specific error messages -->
+                <div class="form__input-error-message"></div>
+            </div>
+            <!-- Button to submit the form -->
+            <button class="form__button" type="submit">Continue</button>
+            <!-- Additional links within the form -->
+            <p class="form__text">
+                <!-- Link to switch to the login form -->
+                <a class="form__link" href="#" id="linkLogin">Already have an account? Sign in</a>
+            </p>
+        </form>
+    </div>
+
+    <script src="./src/login.js"></script>
+
+    <footer class="footer">
+        <p>© 2024 Spinder. All rights reserved.</p>
+        <p>Contact: <a href="mailto:info@yourcompany.com">theGoat@drexel.edu</a></p>
+    </footer> <!-- footer --> 
+</div>
+</body>
+
+
+</html>
