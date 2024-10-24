@@ -1,0 +1,2 @@
+Peter Tzimoulis Bio
+I'm Peter Tzimoulis and I was apart of the team of spinder. I came to the team with an idea and I also came with the most experience in both the spoifty api and with Java script. I came up with the idea from the recent spotify wrapped and other simillar services. My hope for the final product to actually be useable is my day to day life in finding music recommendations.
