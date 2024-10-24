@@ -1,0 +1,6 @@
+My name is David Calamaro (They/Them/He/Him) and I am a first year CS student here at Drexel. 
+I have always loved technology, even since I was a kid and I first stated to get into programming 
+in my freshman year of High school. I would like to eventually work as a mobile app developer at 
+Apple or some other company where mobile apps are needed, since I took 2 iOS app development 
+courses in my junior year of High school and I found it to be very fun to do.
+#this is a test to see if vscode and tux works
